@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+class Game {
+public:
+  void initialize() {
+    cout << "Initializing game..." << endl;
+  }
+
+  void start() {
+    cout << "Starting game..." << endl;
+  }
+
+  void update() {
+    cout << "Updating game..." << endl;
+  }
+
+  void draw() {
+    cout << "Drawing game..." << endl;
+  }
+
+  void close() {
+    cout << "Closing game..." << endl;
+  }
+};
+
+int main() {
+  Game game;
+
+  game.initialize();
+  game.start();
+
+  while (true) {
+    game.update();
+    game.draw();
+  }
+
+  game.close();
+
+  return 0;
+}
